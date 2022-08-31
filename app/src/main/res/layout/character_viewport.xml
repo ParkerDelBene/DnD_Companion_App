@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/character_viewport"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DnDCharacterOrganizer"
+    >
+
+    <RelativeLayout
+        android:id="@+id/class_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:background="@drawable/bg_rounded"
+        android:padding="10sp">
+
+        <TextView
+            android:id="@+id/character_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Class"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/character_class"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5sp"
+            android:minWidth="100sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_toEndOf="@id/class_container"
+        android:padding="10sp"
+        android:background="@drawable/bg_rounded">
+
+        <TextView
+            android:id="@+id/character_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Level"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/character_level"
+            android:layout_marginTop="5sp"
+            android:minWidth="100sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_toStartOf="@id/class_container"
+        android:background="@drawable/bg_rounded"
+        android:padding="10sp"
+        android:tag="name_container">
+
+        <TextView
+            android:id="@+id/character_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/character_name"
+            android:layout_centerHorizontal="true"
+            android:minWidth="100sp"
+            android:layout_marginTop="5sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </RelativeLayout>
+
+    
+        
+
+</RelativeLayout>
