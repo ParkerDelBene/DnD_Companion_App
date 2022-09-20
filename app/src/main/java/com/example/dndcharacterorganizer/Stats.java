@@ -14,6 +14,13 @@ public class Stats {
     private int hitpoints;
     private int initiative;
     private int passive_perception;
+    private boolean strengthSave;
+    private boolean dexteritySave;
+    private boolean constitutionSave;
+    private boolean intelligenceSave;
+    private boolean wisdomSave;
+    private boolean charismaSave;
+
 
     public int getStrength() {
         return strength;
@@ -88,4 +95,77 @@ public class Stats {
         String temp = "";
         return temp + this.strength + "," + this.dexterity + "," + this.constitution + "," + this.intelligence + "," + this.wisdom + "," + this.charisma + "," + this.speed+ "," + this.hitpoints+ "," + this.initiative+ "," + this.passive_perception;
     }
+
+    public boolean isStrengthSave() {
+        return strengthSave;
+    }
+
+    public void setStrengthSave(boolean strengthSave) {
+        this.strengthSave = strengthSave;
+    }
+
+    public boolean isDexteritySave() {
+        return dexteritySave;
+    }
+
+    public void setDexteritySave(boolean dexteritySave) {
+        this.dexteritySave = dexteritySave;
+    }
+
+    public boolean isConstitutionSave() {
+        return constitutionSave;
+    }
+
+    public void setConstitutionSave(boolean constitutionSave) {
+        this.constitutionSave = constitutionSave;
+    }
+
+    public boolean isIntelligenceSave() {
+        return intelligenceSave;
+    }
+
+    public void setIntelligenceSave(boolean intelligenceSave) {
+        this.intelligenceSave = intelligenceSave;
+    }
+
+    public boolean isWisdomSave() {
+        return wisdomSave;
+    }
+
+    public void setWisdomSave(boolean wisdomSave) {
+        this.wisdomSave = wisdomSave;
+    }
+
+    public boolean isCharismaSave() {
+        return charismaSave;
+    }
+
+    public void setCharismaSave(boolean charismaSave) {
+        this.charismaSave = charismaSave;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public void setDexterity(int dexterity) {
+        this.dexterity = dexterity;
+    }
+
+    public void setConstitution(int constitution) {
+        this.constitution = constitution;
+    }
+
+    public void setIntelligence(int intelligence) {
+        this.intelligence = intelligence;
+    }
+
+    public void setWisdom(int wisdom) {
+        this.wisdom = wisdom;
+    }
+
+    public void setCharisma(int charisma) {
+        this.charisma = charisma;
+    }
+
 }

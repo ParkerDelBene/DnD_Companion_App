@@ -18,6 +18,7 @@ abstract public class DnD_Class {
     private ArrayList<Spell> spellList;
     private boolean spellcaster;
     private String spellcastingstat;
+    private String subclass;
 
     public abstract String toString();
     public abstract void levelup(Stats stats);
@@ -93,5 +94,16 @@ abstract public class DnD_Class {
         this.spellList = spellList;
     }
 
+    public ArrayList<Proficiency> getProficiencies() {
+        return proficiencies;
+    }
+
+    public String getSubclass() {
+        return subclass;
+    }
+
+    public void setSubclass(String subclass) {
+        this.subclass = subclass;
+    }
 
 }

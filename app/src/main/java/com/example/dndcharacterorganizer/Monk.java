@@ -5,14 +5,13 @@ public class Monk extends DnD_Class {
     int currKi;
     String martialArtsDie;
     int kiDC;
-    String tradition;
 
-    public Monk(Character character, String tradition) {
+    public Monk(Character character, String subclass) {
         this.maxKi = 0;
         this.currKi = 0;
         this.martialArtsDie = "1d4";
         this.kiDC = 8 + character.getProficiencyBonus() + character.getStats().getWisdom();
-        this.tradition = tradition;
+        this.setSubclass(subclass);
     }
 
     @Override
@@ -93,12 +92,22 @@ public class Monk extends DnD_Class {
                 this.currKi=maxKi;
 
                 name = "Monastic Tradition";
-                description = "When you reach 3rd level, you commit yourself to a monastic tradition. Your tradition grants you features at 3rd level and again at 6th, 11th, and 17th level.";
+                description = "When you reach 3rd level, you commit yourself to a monastic subclass. Your subclass grants you features at 3rd level and again at 6th, 11th, and 17th level.";
 
                 temp = new Ability(name,description);
 
                 this.getAbilities().add(temp);
-                if(tradition == "Astral Self"){
+
+                name = "Deflect Missiles";
+                description = "Starting at 3rd level, you can use your reaction to deflect or catch the missile when you are hit by a ranged weapon attack. When you do so, the damage you take from the attack is reduced by 1d10 + your Dexterity modifier + your monk level.\n" +
+                        "\n" +
+                        "If you reduce the damage to 0, you can catch the missile if it is small enough for you to hold in one hand and you have at least one hand free. If you catch a missile in this way, you can spend 1 ki point to make a ranged attack with a range of 20/60 using the weapon or piece of ammunition you just caught, as part of the same reaction. You make this attack with proficiency, regardless of your weapon proficiencies, and the missile counts as a monk weapon for the attack.";
+
+                temp = new Ability(name,description);
+
+                this.getAbilities().add(temp);
+
+                if(this.getSubclass().equals("Astral Self")){
                     name = "Arms of the Astral Self";
                     description = "At 3rd level, your mastery of your ki allows you to summon a portion of your astral self. As a bonus action, you can spend 1 ki point to summon the arms of your astral self. When you do so, each creature of your choice that you can see within 10 feet of you must succeed on a Dexterity saving throw or take force damage equal to two rolls of your Martial Arts die.\n" +
                             "\n" +
@@ -119,83 +128,119 @@ public class Monk extends DnD_Class {
                     this.getAbilities().add(temp);
 
                 }
-                else if(tradition == "Drunken Master"){
+                else if(this.getSubclass().equals("Drunken Master")){
 
                 }
-                else if(tradition == "Four Elements"){
+                else if(this.getSubclass().equals("Four Elements")){
 
                 }
-                else if(tradition == "Kensei"){
+                else if(this.getSubclass().equals("Kensei")){
 
                 }
-                else if(tradition == "Long Death"){
+                else if(this.getSubclass().equals("Long Death")){
 
                 }
-                else if(tradition == "Mercy"){
+                else if(this.getSubclass().equals("Mercy")){
 
                 }
-                else if(tradition == "Open Hand"){
+                else if(this.getSubclass().equals("Open Hand")){
 
                 }
-                else if(tradition == "Shadow"){
+                else if(this.getSubclass().equals("Shadow")){
 
                 }
-                else if(tradition == "Sun Soul"){
+                else if(this.getSubclass().equals("Sun Soul")){
 
                 }
-                else if(tradition == "Ascendant Dragon"){
+                else if(this.getSubclass().equals("Ascendant Dragon")){
 
                 }
 
                 break;
             case 4:
+                name = "Slow Fall";
+                description = "Beginning at 4th level, you can use your reaction when you fall to reduce any falling damage you take by an amount equal to five times your monk level.";
+                temp = new Ability(name,description);
+
+                this.getAbilities().add(temp);
+
                 this.maxKi++;
                 this.currKi=maxKi;
 
                 break;
             case 5:
+                name = "Extra Attack";
+                description = "Starting at 5th level, you can interfere with the flow of ki in an opponent's body. When you hit another creature with a melee weapon attack, you can spend 1 ki point to attempt a stunning strike. The target must succeed on a Constitution saving throw or be stunned until the end of your next turn.";
+
+                temp = new Ability(name,description);
+
+                this.getAbilities().add(temp);
+
+
                 this.maxKi++;
                 this.currKi=maxKi;
 
                 break;
             case 6:
+                name = "Ki-Empowered Strikes";
+                description = "Starting at 6th level, your unarmed strikes count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.";
+
+                temp = new Ability(name,description);
+
+                this.getAbilities().add(temp);
+
+
                 this.maxKi++;
                 this.currKi=maxKi;
 
 
-                if(tradition == "Astral Self"){
+                if(this.getSubclass().equals("Astral Self")){
 
                 }
-                else if(tradition == "Drunken Master"){
+                else if(this.getSubclass().equals("Drunken Master")){
 
                 }
-                else if(tradition == "Four Elements"){
+                else if(this.getSubclass().equals("Four Elements")){
 
                 }
-                else if(tradition == "Kensei"){
+                else if(this.getSubclass().equals("Kensei")){
 
                 }
-                else if(tradition == "Long Death"){
+                else if(this.getSubclass().equals("Long Death")){
 
                 }
-                else if(tradition == "Mercy"){
+                else if(this.getSubclass().equals("Mercy")){
 
                 }
-                else if(tradition == "Open Hand"){
+                else if(this.getSubclass().equals("Open Hand")){
 
                 }
-                else if(tradition == "Shadow"){
+                else if(this.getSubclass().equals("Shadow")){
 
                 }
-                else if(tradition == "Sun Soul"){
+                else if(this.getSubclass().equals("Sun Soul")){
 
                 }
-                else if(tradition == "Ascendant Dragon"){
+                else if(this.getSubclass().equals("Ascendant Dragon")){
 
                 }
 
                 break;
             case 7:
+
+                name = "Evasion";
+                description = "At 7th level, your instinctive agility lets you dodge out of the way of certain area effects, such as a blue dragon's lightning breath or a fireball spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.";
+                temp = new Ability(name,description);
+
+                this.getAbilities().add(temp);
+
+                name = "Stillness of Mind";
+                description = "Starting at 7th level, you can use your action to end one effect on yourself that is causing you to be charmed or frightened.";
+
+                temp = new Ability(name,description);
+
+                this.getAbilities().add(temp);
+
                 this.maxKi++;
                 this.currKi=maxKi;
 
@@ -211,6 +256,14 @@ public class Monk extends DnD_Class {
 
                 break;
             case 10:
+
+                name = "Purity of Body";
+                description = "At 10th level, your mastery of the ki flowing through you makes you immune to disease and poison.";
+
+                temp = new Ability(name,description);
+
+                this.getAbilities().add(temp);
+
                 this.maxKi++;
                 this.currKi=maxKi;
 
@@ -220,34 +273,34 @@ public class Monk extends DnD_Class {
                 this.currKi=maxKi;
 
 
-                if(tradition == "Astral Self"){
+                if(this.getSubclass().equals("Astral Self")){
 
                 }
-                else if(tradition == "Drunken Master"){
+                else if(this.getSubclass().equals("Drunken Master")){
 
                 }
-                else if(tradition == "Four Elements"){
+                else if(this.getSubclass().equals("Four Elements")){
 
                 }
-                else if(tradition == "Kensei"){
+                else if(this.getSubclass().equals("Kensei")){
 
                 }
-                else if(tradition == "Long Death"){
+                else if(this.getSubclass().equals("Long Death")){
 
                 }
-                else if(tradition == "Mercy"){
+                else if(this.getSubclass().equals("Mercy")){
 
                 }
-                else if(tradition == "Open Hand"){
+                else if(this.getSubclass().equals("Open Hand")){
 
                 }
-                else if(tradition == "Shadow"){
+                else if(this.getSubclass().equals("Shadow")){
 
                 }
-                else if(tradition == "Sun Soul"){
+                else if(this.getSubclass().equals("Sun Soul")){
 
                 }
-                else if(tradition == "Ascendant Dragon"){
+                else if(this.getSubclass().equals("Ascendant Dragon")){
 
                 }
 
@@ -258,16 +311,46 @@ public class Monk extends DnD_Class {
 
                 break;
             case 13:
+                name = "Tongue of the Sun and Moon";
+                description = "Starting at 13th level, you learn to touch the ki of other minds so that you understand all spoken languages. Moreover, any creature that can understand a language can understand what you say.";
+
+                temp = new Ability(name,description);
+
+                this.getAbilities().add(temp);
+
                 this.maxKi++;
                 this.currKi=maxKi;
 
                 break;
             case 14:
+                name = "Diamond Soul";
+                description = "Beginning at 14th level, your mastery of ki grants you proficiency in all saving throws.\n" +
+                        "\n" +
+                        "Additionally, whenever you make a saving throw and fail, you can spend 1 ki point to reroll it and take the second result.";
+
+                temp = new Ability(name,description);
+
+                this.getAbilities().add(temp);
+
+                stats.setStrengthSave(true);
+                stats.setDexteritySave(true);
+                stats.setConstitutionSave(true);
+                stats.setIntelligenceSave(true);
+                stats.setWisdomSave(true);
+                stats.setCharismaSave(true);
+
                 this.maxKi++;
                 this.currKi=maxKi;
 
                 break;
             case 15:
+                name = "Timeless BOdy";
+                description = "At 15th level, your ki sustains you so that you suffer none of the frailty of old age, and you can't be aged magically. You can still die of old age, however. In addition, you no longer need food or water.";
+
+                temp = new Ability(name,description);
+
+                this.getAbilities().add(temp);
+
                 this.maxKi++;
                 this.currKi=maxKi;
 
@@ -281,39 +364,48 @@ public class Monk extends DnD_Class {
                 this.maxKi++;
                 this.currKi=maxKi;
 
-                if(tradition == "Astral Self"){
+                if(this.getSubclass().equals("Astral Self")){
 
                 }
-                else if(tradition == "Drunken Master"){
+                else if(this.getSubclass().equals("Drunken Master")){
 
                 }
-                else if(tradition == "Four Elements"){
+                else if(this.getSubclass().equals("Four Elements")){
 
                 }
-                else if(tradition == "Kensei"){
+                else if(this.getSubclass().equals("Kensei")){
 
                 }
-                else if(tradition == "Long Death"){
+                else if(this.getSubclass().equals("Long Death")){
 
                 }
-                else if(tradition == "Mercy"){
+                else if(this.getSubclass().equals("Mercy")){
 
                 }
-                else if(tradition == "Open Hand"){
+                else if(this.getSubclass().equals("Open Hand")){
 
                 }
-                else if(tradition == "Shadow"){
+                else if(this.getSubclass().equals("Shadow")){
 
                 }
-                else if(tradition == "Sun Soul"){
+                else if(this.getSubclass().equals("Sun Soul")){
 
                 }
-                else if(tradition == "Ascendant Dragon"){
+                else if(this.getSubclass().equals("Ascendant Dragon")){
 
                 }
 
                 break;
             case 18:
+                name = "Empty Body";
+                description = "Beginning at 18th level, you can use your action to spend 4 ki points to become invisible for 1 minute. During that time, you also have resistance to all damage but force damage.\n" +
+                        "\n" +
+                        "Additionally, you can spend 8 ki points to cast the Astral Projection spell, without needing material components. When you do so, you can't take any other creatures with you.";
+
+                temp = new Ability(name,description);
+
+                this.getAbilities().add(temp);
+
                 this.maxKi++;
                 this.currKi=maxKi;
 
@@ -324,6 +416,13 @@ public class Monk extends DnD_Class {
 
                 break;
             case 20:
+                name = "Perfect Self";
+                description = "At 20th level, when you roll for initiative and have no ki points remaining, you regain 4 ki points.";
+
+                temp = new Ability(name,description);
+
+                this.getAbilities().add(temp);
+
                 this.maxKi++;
                 this.currKi=maxKi;
 
