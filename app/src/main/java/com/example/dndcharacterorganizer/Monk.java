@@ -176,6 +176,8 @@ public class Monk extends DnD_Class {
 
                 this.getAbilities().add(temp);
 
+                this.martialArtsDie = "1d6";
+
 
                 this.maxKi++;
                 this.currKi=maxKi;
@@ -188,6 +190,10 @@ public class Monk extends DnD_Class {
                 temp = new Ability(name,description);
 
                 this.getAbilities().add(temp);
+
+                stats.setSpeed(stats.getSpeed() + 5);
+
+                this.setStats(stats);
 
 
                 this.maxKi++;
@@ -267,10 +273,16 @@ public class Monk extends DnD_Class {
                 this.maxKi++;
                 this.currKi=maxKi;
 
+                stats.setSpeed(stats.getSpeed() + 5);
+
+                this.setStats(stats);
+
                 break;
             case 11:
                 this.maxKi++;
                 this.currKi=maxKi;
+
+                this.martialArtsDie = "1d8";
 
 
                 if(this.getSubclass().equals("Astral Self")){
@@ -342,6 +354,10 @@ public class Monk extends DnD_Class {
                 this.maxKi++;
                 this.currKi=maxKi;
 
+                stats.setSpeed(stats.getSpeed() + 5);
+
+                this.setStats(stats);
+
                 break;
             case 15:
                 name = "Timeless BOdy";
@@ -363,6 +379,8 @@ public class Monk extends DnD_Class {
             case 17:
                 this.maxKi++;
                 this.currKi=maxKi;
+
+                this.martialArtsDie = "1d10";
 
                 if(this.getSubclass().equals("Astral Self")){
 
@@ -408,6 +426,10 @@ public class Monk extends DnD_Class {
 
                 this.maxKi++;
                 this.currKi=maxKi;
+
+                stats.setSpeed(stats.getSpeed() + 5);
+
+                this.setStats(stats);
 
                 break;
             case 19:
