@@ -40,7 +40,7 @@ public class Artificer extends DnD_Class {
     }
 
     @Override
-    public void levelup(){
+    public void levelup(Stats stats){
         this.setLevel(this.getLevel()+1);
 
         switch(this.getLevel()){

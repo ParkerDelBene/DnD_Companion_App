@@ -1,7 +1,20 @@
 package com.example.dndcharacterorganizer;
 
-public class Blood_Hunter {
-    public void levelup() {
+public class Blood_Hunter extends DnD_Class{
+    @Override
+    public String toString(){
+        return "";
+    }
+    @Override
+    public void shortrest(){
+
+    }
+    @Override
+    public void longrest(){
+
+    }
+    @Override
+    public void levelup(Stats stats) {
         this.setLevel(this.getLevel()+1);
 
         switch(this.getLevel()){

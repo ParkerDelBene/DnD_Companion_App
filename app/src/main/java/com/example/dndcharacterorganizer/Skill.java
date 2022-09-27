@@ -35,4 +35,8 @@ public class Skill {
     public String getDescription() {
         return description;
     }
+
+    public String toString(){
+        return this.name + ";" + this.factor + ";" + this.description;
+    }
 }

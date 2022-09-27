@@ -106,4 +106,6 @@ abstract public class DnD_Class {
         this.subclass = subclass;
     }
 
+
+
 }
