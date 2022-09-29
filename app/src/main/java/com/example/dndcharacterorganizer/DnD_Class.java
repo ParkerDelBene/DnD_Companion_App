@@ -19,6 +19,7 @@ abstract public class DnD_Class {
     private boolean spellcaster;
     private String spellcastingstat;
     private String subclass;
+    private int hitdice;
 
     public abstract String toString();
     public abstract void levelup(Stats stats);
@@ -106,6 +107,11 @@ abstract public class DnD_Class {
         this.subclass = subclass;
     }
 
+    public int getHitdice() {
+        return hitdice;
+    }
 
-
+    public void setHitdice(int hitdice) {
+        this.hitdice = hitdice;
+    }
 }

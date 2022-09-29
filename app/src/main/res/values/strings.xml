@@ -2216,4 +2216,113 @@ An affected creature is aware of the spell and can thus avoid answering question
 
     </string-array>
 
+    <string-array name="race_array">
+        <item>Dragonborn</item>
+        <item>Dwarf</item>
+        <item>Elf</item>
+        <item>Gnome</item>
+        <item>Half-Elf</item>
+        <item>Half-Orc</item>
+        <item>Halfling</item>
+        <item>Human</item>
+        <item>Tiefling</item>
+        <item>Aarakocra</item>
+        <item>Aasimar</item>
+        <item>Fairy</item>
+        <item>Firbolg</item>
+        <item>Genasi</item>
+        <item>Gith</item>
+        <item>Goliath</item>
+        <item>Harengon</item>
+        <item>Kenku</item>
+        <item>Locathah</item>
+        <item>Owlin</item>
+        <item>Tabaxi</item>
+        <item>Tortle</item>
+        <item>Triton</item>
+        <item>Verdan</item>
+        <item>Bugbear</item>
+        <item>Centaur</item>
+        <item>Goblin</item>
+        <item>Hobgoblin</item>
+        <item>Kobold</item>
+        <item>Lizardfolk</item>
+        <item>Minotaur</item>
+        <item>Orc</item>
+        <item>Yuan-Ti Pureblood</item>
+        <item>Changeling</item>
+        <item>Kalashtar</item>
+        <item>Shifter</item>
+        <item>Warforged</item>
+        <item>Aetherborn</item>
+        <item>Aven</item>
+        <item>Khenra</item>
+        <item>Kor</item>
+        <item>Merfolk</item>
+        <item>Naga</item>
+        <item>Siren</item>
+        <item>Vampire</item>
+        <item>Dhampir</item>
+        <item>Hexblood</item>
+        <item>Reborn</item>
+        <item>Simic Hybrid</item>
+        <item>Vedalken</item>
+        <item>Leonin</item>
+        <item>Satyr</item>
+    </string-array>
+
+    <string name="Dragonborn_description">""</string>
+    <string name="Dwarf_description">""</string>
+    <string name="Elf_description">""</string>
+    <string name="Gnome_description">""</string>
+    <string name="Half_Elf_description">""</string>
+    <string name="Half_Orc_description">""</string>
+    <string name="Halfling_description">""</string>
+    <string name="Human_description">""</string>
+    <string name="Tiefling_description">""</string>
+    <string name="Aarokocra_description">""</string>
+    <string name="Aasimar_description">""</string>
+    <string name="Fairy_description">""</string>
+    <string name="Firbolg_description">""</string>
+    <string name="Genasi_description">""</string>
+    <string name="Gith_description">""</string>
+    <string name="Goliath_description">""</string>
+    <string name="Harengon_description">""</string>
+    <string name="Kenku_description">""</string>
+    <string name="Locathah_description">""</string>
+    <string name="Owlin_description">""</string>
+    <string name="Tabaxi_description">""</string>
+    <string name="Tortle_description">""</string>
+    <string name="Triton_description">""</string>
+    <string name="Verdan_description">""</string>
+    <string name="Bugbear_description">""</string>
+    <string name="Centaur_description">""</string>
+    <string name="Goblin_description">""</string>
+    <string name="Hobgoblin_description">""</string>
+    <string name="Kobold_description">""</string>
+    <string name="Lizardfolk_description">""</string>
+    <string name="Minotaur_description">""</string>
+    <string name="Orc_description">""</string>
+    <string name="Yuan_ti_Pureblood_description">""</string>
+    <string name="Changeling_description">""</string>
+    <string name="Kalashtar_description">""</string>
+    <string name="Shifter_description">""</string>
+    <string name="Warforged_description">""</string>
+    <string name="Aetherborn_description">""</string>
+    <string name="Aven_description">""</string>
+    <string name="Khenra_description">""</string>
+    <string name="Kor_description">""</string>
+    <string name="Merfolk_description">""</string>
+    <string name="Naga_description">""</string>
+    <string name="Siren_description">""</string>
+    <string name="Vampire_description">""</string>
+    <string name="Dhamphir_description">""</string>
+    <string name="Hexblood_description">""</string>
+    <string name="Reborn_description">""</string>
+    <string name="Loxodon_description">""</string>
+    <string name="Simic_Hybrid_description">""</string>
+    <string name="Vedalken_description">""</string>
+    <string name="Leonin_description">""</string>
+    <string name="Satyr_description">""</string>
+
 </resources>

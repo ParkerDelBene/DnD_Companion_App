@@ -12,6 +12,7 @@ public class Monk extends DnD_Class {
         this.martialArtsDie = "1d4";
         this.kiDC = 8 + character.getProficiencyBonus() + character.getStats().getWisdom();
         this.setSubclass(subclass);
+        this.setHitdice(8);
     }
 
     @Override

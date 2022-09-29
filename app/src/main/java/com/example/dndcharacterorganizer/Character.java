@@ -47,20 +47,70 @@ public class Character {
 
     }
 
-    public Character(int hitpoints, int level, int speed,int initiative, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, int passive_perception, String name, String classname, String background){
-        this. level = level;
-        this.stats = new Stats(strength,dexterity,constitution,intelligence,wisdom,charisma,speed,hitpoints,initiative,passive_perception);
+    public Character(int level, int speed, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma,String name, String classname,String subclass, String background){
+        this.level = level;
+        this.stats = new Stats(strength,dexterity,constitution,intelligence,wisdom,charisma);
         this.name = name;
         this.background = background;
         this.id = 0;
+        switch(classname){
+            case "Artificer":
+                this.classname = new Artificer();
+                break;
+            case "Barbarian":
+                this.classname = new Barbarian();
+                break;
+            case "Bard":
+                this.classname = new Bard();
+                break;
+            case "Blood Hunter":
+                this.classname = new Blood_Hunter();
+                break;
+            case "Cleric":
+                this.classname = new Cleric();
+                break;
+            case "Druid":
+                this.classname = new Druid();
+                break;
+            case "Fighter":
+                this.classname = new Fighter();
+                break;
+            case "Monk":
+                this.classname = new Monk(this,subclass);
+                break;
+            case "Paladin":
+                this.classname = new Paladin();
+                break;
+            case "Ranger":
+                this.classname = new Ranger();
+                break;
+            case "Rogue":
+                this.classname = new Rogue();
+                break;
+            case "Sorcerer":
+                this.classname = new Sorcerer();
+                break;
+            case "Warlock":
+                this.classname = new Warlock();
+                break;
+            case "Wizard":
+                this.classname = new Wizard();
+                break;
+        }
+
         for(int i = 0; i < this.name.length(); i++){
             int temp = (int) this.name.charAt(i);
             this.id += temp;
         }
+
+        while(this.classname.getLevel() < this.level){
+            this.classname.levelup(this.stats);
+        }
     }
 
     public void levelup(){
-
+        this.level++;
+        this.classname.levelup(stats);
     }
 
     public void setLevel(int level) {

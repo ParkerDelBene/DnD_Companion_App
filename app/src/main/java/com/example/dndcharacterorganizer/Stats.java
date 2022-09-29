@@ -46,17 +46,13 @@ public class Stats {
         return charisma;
     }
 
-    public Stats(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, int speed, int hitpoints, int initiative, int passive_perception){
+    public Stats(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         this.strength = strength;
         this.dexterity = dexterity;
         this.constitution = constitution;
         this.intelligence = intelligence;
         this.wisdom = wisdom;
         this.charisma = charisma;
-        this.speed = speed;
-        this.hitpoints = hitpoints;
-        this.initiative = initiative;
-        this.passive_perception = passive_perception;
     }
 
     public int getSpeed() {
