@@ -23,6 +23,7 @@ import java.util.List;
 public class DnDCharacterOrganizer extends AppCompatActivity {
 
     AppDataBase db;
+    boolean statRoll = true;
 
 
     @Override
@@ -184,7 +185,21 @@ public class DnDCharacterOrganizer extends AppCompatActivity {
     }
 
     public void generate_Random_Stats(View view){
+        if(statRoll){
 
+        }
+        else{
+
+        }
+    }
+
+    public void select_Stat_Roll(View view){
+        if(view.getId() == getResources().getIdentifier("four_d_six","string",getPackageName())){
+            statRoll = true;
+        }
+        else {
+            statRoll = false;
+        }
     }
 
 

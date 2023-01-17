@@ -186,7 +186,7 @@
         app:spinner_popup_height="300sp"
         app:spinner_popup_width="50sp" />
 
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/minimum_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -215,13 +215,15 @@
             android:layout_height="wrap_content"
             android:id="@+id/four_d_six"
             android:text="4d6"
-            android:layout_marginStart="40sp"/>
+            android:layout_marginStart="40sp"
+            android:onClick="select_Stat_Roll"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/three_d_six"
             android:layout_marginStart="50sp"
-            android:text="3d6"/>
+            android:text="3d6"
+            android:onClick="select_Stat_Roll"/>
 
 
     </RadioGroup>
