@@ -18,7 +18,6 @@ import android.widget.TextView;
 import com.skydoves.powerspinner.OnSpinnerItemSelectedListener;
 import com.skydoves.powerspinner.PowerSpinnerView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class DnDCharacterOrganizer extends AppCompatActivity {
@@ -64,7 +63,7 @@ public class DnDCharacterOrganizer extends AppCompatActivity {
     public void create_Character(View view){
 
         //setting the Content view
-        setContentView(R.layout.character_creator);
+        setContentView(R.layout.character_creation_start);
 
 
         //getting the class dropdown spinner
@@ -181,6 +180,10 @@ public class DnDCharacterOrganizer extends AppCompatActivity {
         /*
             Getting the Selected Stats for the Character.
          */
+
+    }
+
+    public void generate_Random_Stats(View view){
 
     }
 

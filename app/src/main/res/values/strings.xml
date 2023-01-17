@@ -500,7 +500,7 @@ If you're a halfling or a gnome, you pass as a little person or a child. If you'
         <item>Weapon Master</item>
     </string-array>
 
-    <string name="confirm_character">Confirm Character</string>
+    <string name="next_character">Next</string>
     <string name="character_background">Character Background</string>
     <string name="character_subclass">Character Subclass</string>
     <string name="character_class">Character Class</string>
@@ -2244,6 +2244,7 @@ An affected creature is aware of the spell and can thus avoid answering question
         <item>Bugbear</item>
         <item>Centaur</item>
         <item>Goblin</item>
+        <item>Grung</item>
         <item>Hobgoblin</item>
         <item>Kobold</item>
         <item>Lizardfolk</item>
@@ -2271,33 +2272,49 @@ An affected creature is aware of the spell and can thus avoid answering question
         <item>Satyr</item>
     </string-array>
 
-    <string name="Dragonborn_description">""</string>
-    <string name="Dwarf_description">""</string>
-    <string name="Elf_description">""</string>
-    <string name="Gnome_description">""</string>
-    <string name="Half_Elf_description">""</string>
-    <string name="Half_Orc_description">""</string>
-    <string name="Halfling_description">""</string>
-    <string name="Human_description">""</string>
-    <string name="Tiefling_description">""</string>
-    <string name="Aarokocra_description">""</string>
-    <string name="Aasimar_description">""</string>
-    <string name="Fairy_description">""</string>
-    <string name="Firbolg_description">""</string>
-    <string name="Genasi_description">""</string>
-    <string name="Gith_description">""</string>
-    <string name="Goliath_description">""</string>
-    <string name="Harengon_description">""</string>
-    <string name="Kenku_description">""</string>
-    <string name="Locathah_description">""</string>
-    <string name="Owlin_description">""</string>
-    <string name="Tabaxi_description">""</string>
-    <string name="Tortle_description">""</string>
-    <string name="Triton_description">""</string>
-    <string name="Verdan_description">""</string>
-    <string name="Bugbear_description">""</string>
-    <string name="Centaur_description">""</string>
-    <string name="Goblin_description">""</string>
+    <string name="Dragonborn_description">"The dragonborn walk proudly through a world that greets them with fearful incomprehension. Shaped by the dragons themselves, dragonborn originally hatched from dragon eggs as a unique race, combining the best attributes of dragons and humanoids."</string>
+    <string name="Dwarf_description">"Kingdoms rich in ancient grandeur, halls carved into the roots of mountains, the echoing of picks and hammers in deep mines and blazing forges, a commitment to clan and tradition, and a burning hatred of goblins and orcs – these common threads unite all dwarves."</string>
+    <string name="Elf_description">"Elves are a magical people of otherworldly grace, living in places of ethereal beauty, in the midst of ancient forests or in silvery spires glittering with faerie light, where soft music drifts through the air and gentle fragrances waft on the breeze. Elves love nature and magic, art and artistry, music and poetry."</string>
+    <string name="Gnome_description">"A constant hum of busy activity pervades the warrens and neighborhoods where gnomes form their close-knit communities. Louder sounds punctuate the hum: a crunch of grinding gears here, a minor explosion there, a yelp of surprise or triumph, and especially bursts of laughter. Gnomes take delight in life, enjoying every moment of invention, exploration, investigation, creation, and play."</string>
+    <string name="Half_Elf_description">"Walking in two worlds but truly belonging to neither, half-elves combine what some say are the best qualities of their elf and human parents: human curiosity, inventiveness, and ambition tempered by the refined senses, love of nature, and artistic tastes of the elves."</string>
+    <string name="Half_Orc_description">"When alliances between humans and orcs are sealed by marriages, half-orcs are born. Some half-orcs rise to become proud chiefs of orc tribes, their human blood giving them an edge over their full-blooded orc rivals. Some venture into the world to prove their worth among humans and other more civilized races. Many of these become adventurers, achieving greatness for their mighty deeds and notoriety for their barbaric customs and savage fury."</string>
+    <string name="Halfling_description">"The comforts of home are the goals of most halflings' lives: a place to settle in peace and quiet, far from marauding monsters and clashing armies. Others form nomadic bands that travel constantly, lured by the open road and the wide horizon to discover the wonders of new lands and peoples. Halflings work readily with others, and they are loyal to their friends, whether halfling or otherwise. They can display remarkable ferocity when their friends, families, or communities are threatened."</string>
+    <string name="Human_description">"In the reckonings of most worlds, humans are the youngest of the common races, late to arrive on the world scene and short-lived in comparison to dwarves, elves, and dragons. Perhaps it is because of their shorter lives that they strive to achieve as much as they can in the years they are given. Or maybe they feel they have something to prove to the elder races, and that's why they build their mighty empires on the foundation of conquest and trade. Whatever drives them, humans are the innovators, the achievers, and the pioneers of the worlds."</string>
+    <string name="Tiefling_description">"To be greeted with stares and whispers, to suffer violence and insult on the street, to see mistrust and fear in every eye: this is the lot of the tiefling. And to twist the knife, tieflings know that this is because a pact struck generations ago infused the essence of Asmodeus, overlord of the Nine Hells (and many of the other powerful devils serving under him) into their bloodline. Their appearance and their nature are not their fault but the result of an ancient sin, for which they and their children and their children's children will always be held accountable."</string>
+    <string name="Aarokocra_description">"Sequestered in high mountains atop tall trees, the aarakocra evoke fear and wonder. Many of these birdfolk hail from the boundless vistas of the Elemental Plane of Air. They are immigrants, refugees, scouts, and explorers, their outposts functioning as footholds in a world both strange and alien."</string>
+    <string name="Aasimar_description">"Aasimar bear within their souls the light of the heavens. They are descended from humans with a touch of the power of Mount Celestia, the divine realm of many lawful good deities. Aasimar are born to serve as champions of the gods, their births hailed as blessed events. They are a people of otherworldly visages, with luminous features that reveal their celestial heritage.
+
+An aasimar, except for one who has turned to evil, has a link to an angelic being. That being – usually a deva – provides guidance to the aasimar, though this connection functions only in dreams. As such, the guidance is not a direct command or a simple spoken word. Instead, the aasimar receives visions, prophecies, and feelings."</string>
+    <string name="Fairy_description">"The Feywild is home to many fantastic peoples, including fairies. Fairies are a wee folk, but not
+nearly as much so as their pixie and sprite friends. The first fairies spoke Elvish, Goblin, or Sylvan, and encounters with human visitors prompted many of them to learn Common as well.
+
+Infused with the magic of the Feywild, most fairies look like Small elves with insectile wings, but each fairy has a special physical characteristic that sets the fairy apart. For your fairy, roll on the Fey Characteristics table or choose an option from it. You're also free to come up with your own characteristic if none of the suggestions below fit your character."</string>
+    <string name="Firbolg_description">"Firbolgs are fey-oriented half-giants. Their tribes cloister in remote forest strongholds, preferring to spend their days in quiet harmony with the woods. When provoked, firbolgs demonstrate formidable skills with weapons and druidic magic."</string>
+    <string name="Genasi_description">"Those who think of other planes at all consider them remote, distant realms, but planar influence can be felt throughout the world. It sometimes manifests in beings who, through an accident of birth, carry the power of the planes in their blood. The genasi are one such people, the offspring of genies and mortals."</string>
+    <string name="Gith_description">"The warlike githyanki and the contemplative githzerai are a sundered people – two cultures that utterly despise one another. The brutal githyanki are trained from birth as warriors, while the githzerai hone their minds to a razor’s edge in their fortresses within Limbo. But before there were githyanki or githzerai, these creatures were a single race enslaved by the illithids.
+
+Although they attempted to overthrow their masters many times, their rebellions were repeatedly crushed until a great leader named Gith arose. After much bloodshed, Gith and her followers threw off the yoke of their illithid masters, but another leader named Zerthimon emerged in the aftermath of battle. Zerthimon challenged Gith's motives, claiming that her strict martial leadership and desire for vengeance amounted to little more than another form of slavery for her people. A rift erupted between followers of each leader, and they eventually became the two races whose enmity endures to this day: the Githyanki in the way of Gith, and the Githzerai in the way of Zerthimon.
+
+Whether these tall, gaunt creatures were peaceful or savage, cultured or primitive before the illithids enslaved and changed them, none can say. Not even the original name of their race remains from that distant time."</string>
+    <string name="Goliath_description">"At the highest mountain peaks dwell the reclusive goliaths, wandering a bleak realm of rock, wind, and cold. Their bodies look as if they are carved from mountain stone and give them great physical power. Their hearts are infused with the cold regard of their frigid realm, leaving each goliath with the responsibility to earn a place in the tribe or die trying."</string>
+    <string name="Harengon_description">"Harengons originated in the Feywild, where they spoke Sylvan and embodied the spirit of freedom and travel. In time, these rabbitfolk hopped into other worlds, bringing the fey realm's exuberance with them and learning new languages as they went.
+
+Harengons are bipedal, with the characteristic long feet of the rabbits they resemble and fur in a variety of colors. They share the keen senses and powerful legs of leporine creatures and are full of energy, like a wound-up spring. Harengons are blessed with a little fey luck, and they often find themselves a few fortunate feet away from dangers during adventures."</string>
+    <string name="Kenku_description">"Haunted by an ancient crime that robbed them of their wings, the flightless kenku wander the world as vagabonds and burglars who live at the edge of human society. Kenku suffer from a sinister reputation that is not wholly unearned, but they can prove to be valuable allies."</string>
+    <string name="Locathah_description">"These resilient and proud fish-folk have endured war, slavery, and mistreatment at the hands of other aquatic creatures. They dwell in submerged tribal communities along seacoasts, and hunt both above and below the water."</string>
+    <string name="Owlin_description">"Distant kin of giant owls from the Feywild, owlin come in many shapes and sizes, from petite and fluffy to wide-winged and majestic. Owlin have arms and legs like other Humanoids, as well as wings that extend from their back and shoulders.
+
+Like owls, owlin are graced with feathers that make no sound when they move or fly, making it easy for them to sneak up on you in the library.
+
+Your owlin character might be nocturnal. Or perhaps your character is simply prone to rise later, embodying the common nickname of night owl."</string>
+    <string name="Tabaxi_description">"Hailing from a strange and distant land, wandering tabaxi are catlike humanoids driven by curiosity to collect interesting artifacts, gather tales and stories, and lay eyes on all the world's wonders. Ultimate travelers, the inquisitive tabaxi rarely stay in one place for long. Their innate nature pushes them to leave no secrets uncovered, no treasures or legends lost."</string>
+    <string name="Tortle_description">"What many tortles consider a simple life, others might call a life of adventure. Tortles are born near sandy coastlines, but as soon as they're able to walk on two legs, they become nomad survivalists eager to explore the wilderness, experience its many wonders, put their skills to the test, and make new acquaintances."</string>
+    <string name="Triton_description">"Tritons guard the ocean depths, building small settlements beside deep trenches, portals to the elemental planes, and other dangerous spots far from the eyes of land-bound folk. Long-established guardians of the deep ocean floor, the noble tritons have gradually become increasingly active in the world above."</string>
+    <string name="Verdan_description">"Verdan owe their existence to chaos. Descendants of goblins and hobgoblins, transformed by the shadow of That-Which-Endures. They are THE newest race of Faerûn."</string>
+    <string name="Bugbear_description">"Bugbears rely on stealth and strength to attack, preferring to operate at night. When they're not in battle, bugbears spend much of their time resting or dozing, and bully weaker creatures into doing their bidding. From the viewpoint of the rest of the world, their aggression and savagery are thankfully offset by their rarity and lethargy."</string>
+    <string name="Centaur_description">"Roamers at heart, centaurs love open spaces and the freedom to travel. As much as they can, centaurs run. They race the wind, hooves thundering and tails streaming behind them."</string>
+    <string name="Goblin_description">"Goblins occupy an uneasy place in a dangerous world, and they react by lashing out at any creatures they believe they can bully. Cunning in battle and cruel in victory, goblins are fawning and servile in defeat."</string>
+    <string name="Grung_description">""</string>
     <string name="Hobgoblin_description">""</string>
     <string name="Kobold_description">""</string>
     <string name="Lizardfolk_description">""</string>
@@ -2324,5 +2341,6 @@ An affected creature is aware of the spell and can thus avoid answering question
     <string name="Vedalken_description">""</string>
     <string name="Leonin_description">""</string>
     <string name="Satyr_description">""</string>
+    <string name="roll_for_stats">Roll For Stats</string>
 
 </resources>
