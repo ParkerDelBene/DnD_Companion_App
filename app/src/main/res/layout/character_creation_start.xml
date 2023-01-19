@@ -200,7 +200,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20sp"
-        android:onClick="confirm_Character"
+        android:onClick="character_stats_screen"
         android:padding="20sp"
         android:text="@string/next_character"
         android:textSize="20sp" />

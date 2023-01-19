@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.room.Room;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -12,6 +13,11 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Random;
 
 import android.widget.TextView;
 
@@ -24,6 +30,7 @@ public class DnDCharacterOrganizer extends AppCompatActivity {
 
     AppDataBase db;
     boolean statRoll = true;
+    boolean min72 = true;
 
 
     @Override
@@ -109,7 +116,6 @@ public class DnDCharacterOrganizer extends AppCompatActivity {
             }
         });
 
-
         /*
             Creating Races array Spinner
         */
@@ -186,6 +192,14 @@ public class DnDCharacterOrganizer extends AppCompatActivity {
 
     public void generate_Random_Stats(View view){
         if(statRoll){
+            ArrayList<Integer> stat = new ArrayList<Integer>();
+            Random random = new Random();
+            for(int i = 0 ; i < 4; i++){
+                stat.add(random.nextInt(6) + 1);
+            }
+
+            Collections.sort(stat);
+
 
         }
         else{
@@ -194,12 +208,13 @@ public class DnDCharacterOrganizer extends AppCompatActivity {
     }
 
     public void select_Stat_Roll(View view){
-        if(view.getId() == getResources().getIdentifier("four_d_six","string",getPackageName())){
-            statRoll = true;
-        }
-        else {
-            statRoll = false;
-        }
+        statRoll = view.getId() == R.id.four_d_six;
+    }
+
+    public void character_stats_screen(View view){
+        setContentView(R.layout.character_creation_stats);
+
+
     }
 
 
