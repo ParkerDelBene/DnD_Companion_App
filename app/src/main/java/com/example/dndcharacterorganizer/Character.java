@@ -49,7 +49,7 @@ public class Character {
 
     public Character(int level, int speed, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma,String name, String classname,String subclass, String background){
         this.level = level;
-        this.stats = new Stats(strength,dexterity,constitution,intelligence,wisdom,charisma);
+        //this.stats = new Stats(strength,dexterity,constitution,intelligence,wisdom,charisma);
         this.name = name;
         this.background = background;
         this.id = 0;

@@ -89,7 +89,7 @@ public class Converters {
     @TypeConverter
     public static Stats stringToStats(String value){
         String[] temp = value.split(",");
-        Stats stats = new Stats(Integer.parseInt(temp[0]),Integer.parseInt(temp[1]),Integer.parseInt(temp[2]),Integer.parseInt(temp[3]),Integer.parseInt(temp[4]),Integer.parseInt(temp[5]),Integer.parseInt(temp[6]),Integer.parseInt(temp[7]),Integer.parseInt(temp[8]),Integer.parseInt(temp[9]));
+        Stats stats = new Stats(Integer.parseInt(temp[0]),Integer.parseInt(temp[1]),Integer.parseInt(temp[2]),Integer.parseInt(temp[3]),Integer.parseInt(temp[4]),Integer.parseInt(temp[5]),Integer.parseInt(temp[6]),Integer.parseInt(temp[7]),Integer.parseInt(temp[8]),Integer.parseInt(temp[9]),Boolean.parseBoolean(temp[10]),Boolean.parseBoolean(temp[11]),Boolean.parseBoolean(temp[12]),Boolean.parseBoolean(temp[13]),Boolean.parseBoolean(temp[14]),Boolean.parseBoolean(temp[15]));
         return stats;
     }
 

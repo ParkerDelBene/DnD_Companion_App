@@ -15,6 +15,12 @@
         android:layout_centerHorizontal="true"/>
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="You can roll for stats or select from the dropdowns"/>
+
+    <TextView
         android:id="@+id/strength_stat_identifier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -236,7 +242,78 @@
         android:layout_below="@id/minimum_switch"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50sp"
-        android:onClick="generate_Random_Stats"/>
+        android:onClick="generate_Random_Stats"
+        android:id="@+id/generate_button"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generate_button"
+        android:text="Generated Stats"
+        android:layout_marginTop="20sp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:id="@+id/generated_stats"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_alignEnd="@id/stat_1"
+        android:layout_below="@id/generated_stats"
+        android:layout_marginTop="20sp"
+        android:id="@+id/random_stat_1"
+        android:text="10"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/generated_stats"
+        android:layout_marginTop="20sp"
+        android:id="@+id/random_stat_2"
+        android:text="10"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_alignStart="@id/stat_3"
+        android:layout_below="@id/generated_stats"
+        android:layout_marginTop="20sp"
+        android:id="@+id/random_stat_3"
+        android:text="10"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_alignEnd="@id/random_stat_1"
+        android:layout_below="@id/random_stat_1"
+        android:layout_marginTop="40sp"
+        android:id="@+id/random_stat_4"
+        android:text="10"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/random_stat_2"
+        android:layout_marginTop="40sp"
+        android:id="@+id/random_stat_5"
+        android:text="10"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_alignEnd="@id/random_stat_3"
+        android:layout_below="@id/random_stat_3"
+        android:layout_marginTop="40sp"
+        android:id="@+id/random_stat_6"
+        android:text="10"/>
 
 
 

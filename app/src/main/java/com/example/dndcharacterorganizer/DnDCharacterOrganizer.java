@@ -29,8 +29,8 @@ import java.util.List;
 public class DnDCharacterOrganizer extends AppCompatActivity {
 
     AppDataBase db;
-    boolean statRoll = true;
-    boolean min72 = true;
+    private boolean statRoll = true;
+    private boolean min72 = false;
 
 
     @Override
@@ -49,12 +49,12 @@ public class DnDCharacterOrganizer extends AppCompatActivity {
                 Spell_DAO spellDao = db.spell_dao();
                 /*Debugging the SpellList DataBase*/
                 //List<Spell> spelllist = spellDao.getAll();
-                if(spellDao.getAll().size() == 0) {
+                if (spellDao.getAll().size() == 0) {
                     String[] spells = getResources().getStringArray(R.array.spell_list);
                     int counter = 0;
                     for (String spell : spells) {
                         String[] temp = spell.split(";");
-                        Spell newspell = new Spell(counter,Integer.parseInt(temp[0]), temp[1], temp[2], temp[3], Boolean.parseBoolean(temp[4]), Boolean.parseBoolean(temp[5]), temp[6], temp[7], Boolean.parseBoolean(temp[8]), temp[9], temp[10], Boolean.parseBoolean(temp[11]), temp[12], temp[13], temp[14]);
+                        Spell newspell = new Spell(counter, Integer.parseInt(temp[0]), temp[1], temp[2], temp[3], Boolean.parseBoolean(temp[4]), Boolean.parseBoolean(temp[5]), temp[6], temp[7], Boolean.parseBoolean(temp[8]), temp[9], temp[10], Boolean.parseBoolean(temp[11]), temp[12], temp[13], temp[14]);
                         spellDao.insertAll(newspell);
                         counter++;
                     }
@@ -190,21 +190,117 @@ public class DnDCharacterOrganizer extends AppCompatActivity {
 
     }
 
-    public void generate_Random_Stats(View view){
-        if(statRoll){
-            ArrayList<Integer> stat = new ArrayList<Integer>();
-            Random random = new Random();
-            for(int i = 0 ; i < 4; i++){
-                stat.add(random.nextInt(6) + 1);
-            }
+    /*
+        Handles the generating of random stats for the character creation screen.
+     */
+    public void generate_Random_Stats(View view) {
+        ArrayList<Integer> randomStats = new ArrayList<>();
+        ArrayList<Integer> stat = new ArrayList<>();
+        Integer num = 0;
+        Integer total = 0;
 
-            Collections.sort(stat);
+        if(min72) {
+            do{
+                if (statRoll) {
+
+                    for (int i = 0; i < 6; i++) {
+                        Random random = new Random();
+                        for (int j = 0; j < 4; j++) {
+                            stat.add(random.nextInt(6) + 1);
+                        }
+
+                        Collections.sort(stat);
 
 
+                        num += stat.get(1);
+                        num += stat.get(2);
+                        num += stat.get(3);
+
+                        randomStats.add(num);
+                        total += num;
+
+                        num = 0;
+                        stat.clear();
+
+                    }
+
+
+                } else {
+
+                    for (int i = 0; i < 6; i++) {
+                        Random random = new Random();
+                        for (int j = 0; j < 3; j++) {
+                            stat.add(random.nextInt(6) + 1);
+                        }
+
+                        Collections.sort(stat);
+
+                        num += stat.get(0);
+                        num += stat.get(1);
+                        num += stat.get(2);
+
+                        randomStats.add(num);
+
+                        num = 0;
+                        stat.clear();
+                    }
+                }
+            }while(total < 72);
         }
         else{
+            if (statRoll) {
 
+                for (int i = 0; i < 6; i++) {
+                    Random random = new Random();
+                    for (int j = 0; j < 4; j++) {
+                        stat.add(random.nextInt(6) + 1);
+                    }
+
+                    Collections.sort(stat);
+
+
+                    num += stat.get(1);
+                    num += stat.get(2);
+                    num += stat.get(3);
+
+                    randomStats.add(num);
+                    total += num;
+
+                    num = 0;
+                    stat.clear();
+
+                }
+
+
+            } else {
+
+                for (int i = 0; i < 6; i++) {
+                    Random random = new Random();
+                    for (int j = 0; j < 3; j++) {
+                        stat.add(random.nextInt(6) + 1);
+                    }
+
+                    Collections.sort(stat);
+
+                    num += stat.get(0);
+                    num += stat.get(1);
+                    num += stat.get(2);
+
+                    randomStats.add(num);
+
+                    num = 0;
+                    stat.clear();
+                }
+            }
         }
+
+        for(int i = 0; i< 6; i++){
+
+            String typename = getResources().getResourceTypeName(R.id.random_stat_1);
+            TextView random_stat = (TextView) findViewById(getResources().getIdentifier("random_stat_" + (i+1),"id",getPackageName() ));
+            random_stat.setText(randomStats.get(i).toString());
+        }
+
     }
 
     public void select_Stat_Roll(View view){

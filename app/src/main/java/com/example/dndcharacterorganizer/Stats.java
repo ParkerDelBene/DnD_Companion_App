@@ -46,13 +46,23 @@ public class Stats {
         return charisma;
     }
 
-    public Stats(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+    public Stats(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, int speed, int hitpoints, int initiative, int passive, boolean strengthSave, boolean dexteritySave, boolean constitutionSave, boolean intelligenceSave, boolean wisdomSave, boolean charismaSave) {
         this.strength = strength;
         this.dexterity = dexterity;
         this.constitution = constitution;
         this.intelligence = intelligence;
         this.wisdom = wisdom;
         this.charisma = charisma;
+        this.speed = speed;
+        this.hitpoints = hitpoints;
+        this.initiative = initiative;
+        this.passive_perception = passive;
+        this.strengthSave = strengthSave;
+        this.dexteritySave = dexteritySave;
+        this.constitutionSave = constitutionSave;
+        this.intelligenceSave = intelligenceSave;
+        this.wisdomSave = wisdomSave;
+        this.charismaSave = charismaSave;
     }
 
     public int getSpeed() {
@@ -89,7 +99,7 @@ public class Stats {
 
     public String toString(){
         String temp = "";
-        return temp + this.strength + "," + this.dexterity + "," + this.constitution + "," + this.intelligence + "," + this.wisdom + "," + this.charisma + "," + this.speed+ "," + this.hitpoints+ "," + this.initiative+ "," + this.passive_perception;
+        return temp + this.strength + "," + this.dexterity + "," + this.constitution + "," + this.intelligence + "," + this.wisdom + "," + this.charisma + "," + this.speed+ "," + this.hitpoints+ "," + this.initiative + "," + this.passive_perception + "," + this.strengthSave + "," + this.dexteritySave + "," + this.constitutionSave + "," + this.intelligenceSave + "," + this.wisdomSave+ "," + this.charismaSave;
     }
 
     public boolean isStrengthSave() {
