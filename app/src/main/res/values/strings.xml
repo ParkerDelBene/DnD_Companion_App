@@ -501,12 +501,12 @@ If you're a halfling or a gnome, you pass as a little person or a child. If you'
     </string-array>
 
     <string name="next_character">Next</string>
-    <string name="character_background">Character Background</string>
-    <string name="character_subclass">Character Subclass</string>
-    <string name="character_class">Character Class</string>
-    <string name="character_level">Character Level</string>
+    <string name="character_background">Background</string>
+    <string name="character_subclass">Subclass</string>
+    <string name="character_class">Class</string>
+    <string name="character_level">Level</string>
     <string name="character_name">Character Name</string>
-    <string name="character_race">Character Race</string>
+    <string name="character_race">Race</string>
     <string name="press_and_hold_for_descriptions">Press and Hold For Descriptions</string>
     <string name="dexterity">Dexterity</string>
     <string name="strength">Strength</string>

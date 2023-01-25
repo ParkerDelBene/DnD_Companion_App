@@ -201,6 +201,8 @@ public class DnDCharacterOrganizer extends AppCompatActivity {
 
         if(min72) {
             do{
+                randomStats.clear();
+                total = 0;
                 if (statRoll) {
 
                     for (int i = 0; i < 6; i++) {
@@ -240,6 +242,7 @@ public class DnDCharacterOrganizer extends AppCompatActivity {
                         num += stat.get(2);
 
                         randomStats.add(num);
+                        total += num;
 
                         num = 0;
                         stat.clear();
@@ -303,10 +306,23 @@ public class DnDCharacterOrganizer extends AppCompatActivity {
 
     }
 
+    /*
+        Handles the selection of 4d6 vs 3d6
+     */
     public void select_Stat_Roll(View view){
         statRoll = view.getId() == R.id.four_d_six;
     }
 
+    /*
+        Handles the switching of minimum of 72
+     */
+    public void select_min_72(View view){
+        min72 = !min72;
+    }
+
+    /*
+        Handles the switching from the character creation start page to the stat page.
+     */
     public void character_stats_screen(View view){
         setContentView(R.layout.character_creation_stats);
 
